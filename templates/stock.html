@@ -1,0 +1,13 @@
+<!doctype html>
+<title>Stock Details</title>
+{% if stock %}
+  <h1>Stock Details</h1>
+  <p><strong>Symbol:</strong> {{ stock.symbol }}</p>
+  <p><strong>Current Date and Time:</strong> {{ stock.timestamp }}</p>
+  <p><strong>Company Name:</strong> {{ stock.company_name }}</p>
+  <p><strong>Stock Price:</strong> ${{ stock.price }}</p>
+  <p><strong>Value Change:</strong> {{ stock.change }}</p>
+  <p><strong>Percentage Change:</strong> {{ stock.percent_change }}</p>
+{% else %}
+  <h1>Stock Details Not Available</h1>
+{% endif %}
